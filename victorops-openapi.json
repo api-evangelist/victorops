@@ -1,0 +1,2118 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "VictorOps",
+        "description": "This API allows you to interact with the VictorOps platform in various ways. Your account may be limited\nto a total number of API calls per month. Also, some of these API calls have rate limits.\n\nNOTE: In this documentation when creating a sample curl request (clicking the TRY IT OUT! button), in some API\nviewing interfaces, the '@' in an email address may be encoded. Please note that the REST endpoints will not\nprocess the encoded version. Make sure that the encoded character '%40' is changed to its unencoded form before\nsubmitting the curl request.\n",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.victorops.com\/"
+    ],
+    "paths": {
+        "\/api-public\/v1\/alerts\/{uuid}": {
+            "get": {
+                "summary": "Retrieve alert details.",
+                "description": "Retrieve the details of an alert that was sent VictorOps by you.\n\nThis API may be called a maximum of 6 times per minute.\n",
+                "operationId": "ApiPublicV1AlertsUuidGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "in": "path",
+                        "description": "The VictorOps uuid of the alert"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/incidents": {
+            "get": {
+                "summary": "Get current incident information",
+                "description": "Get a list of the currently open, acknowledged and recently resolved incidents.\nThis API may be called a maximum of 6 times per minute.\n",
+                "operationId": "ApiPublicV1IncidentsGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Create a new incident",
+                "description": "Create a new incident.\n\nThis call replicates the function of our\nmanual incident creation process.\nMonitoring tools and custom integrations\nshould be configured using our\nREST Endpoint.\n\nThis API may be called a maximum of 6 times per minute.\n",
+                "operationId": "ApiPublicV1IncidentsPost",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/incidents\/ack": {
+            "patch": {
+                "summary": "Acknowledge an incident or list of incidents",
+                "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 6 times per minute.\n",
+                "operationId": "ApiPublicV1IncidentsAckPatch",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/incidents\/byUser\/ack": {
+            "patch": {
+                "summary": "Acknowledge all incidents for which a user was paged.",
+                "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 6 times per minute.\n",
+                "operationId": "ApiPublicV1IncidentsByUserAckPatch",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/incidents\/byUser\/resolve": {
+            "patch": {
+                "summary": "Resolve all incidents for which a user was paged.",
+                "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 6 times per minute.\n",
+                "operationId": "ApiPublicV1IncidentsByUserResolvePatch",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/incidents\/reroute": {
+            "post": {
+                "summary": "Reroute one or more incidents to one or more new routable destinations.",
+                "description": "Reroute one or more incidents to one or more users and\/or escalation policies\n",
+                "operationId": "ApiPublicV1IncidentsReroutePost",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/incidents\/resolve": {
+            "patch": {
+                "summary": "Resolve an incident or list of incidents",
+                "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 6 times per minute.\n",
+                "operationId": "ApiPublicV1IncidentsResolvePatch",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/oncall\/current": {
+            "get": {
+                "summary": "Get an organization's on-call users",
+                "description": "Get all on-call uesrs\/teams for your organization.\n\nThis API may be called a maximum of 1 times per minute.\n",
+                "operationId": "ApiPublicV1OncallCurrentGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/org\/routing-keys": {
+            "get": {
+                "summary": "List routing keys with associated teams",
+                "description": "Retrieves a list of routing keys and associated teams.\nThis API may be called a maximum of once a minute.",
+                "operationId": "ApiPublicV1OrgRoutingKeysGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/policies": {
+            "get": {
+                "summary": "Get escalation policy info",
+                "description": "Retrieves a list of escalation policy information.\nThis API may be called a maximum of once a minute",
+                "operationId": "ApiPublicV1PoliciesGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/policies\/types\/contacts": {
+            "get": {
+                "summary": "Get the available contact types",
+                "description": "Get the available contact types\n\ndescription: \"Email Address\", type: \"email\"\ndescription: \"Phone Number\", type: \"phone\"\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1PoliciesTypesContactsGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/policies\/types\/notifications": {
+            "get": {
+                "summary": "Get the available notification types",
+                "description": "Get the available notification types\n\ndescription: \"Send a push notification to all my devices\", type: \"push\"\ndescription: \"Send an email to an email address\", type: \"email\"\ndescription: \"Send an SMS to a phone number\", type: \"sms\"\ndescription: \"Make a phone call to a phone number\", type: \"phone\"\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1PoliciesTypesNotificationsGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/policies\/types\/timeouts": {
+            "get": {
+                "summary": "Get the available timeout values",
+                "description": "Get the available timeout values\n\ndescription: \"If still unacked after 1 minute\", type: 1\ndescription: \"If still unacked after 5 minutes\", type: 5\ndescription: \"If still unacked after 10 minutes\", type: 10\ndescription: \"If still unacked after 15 minutes\", type: 15\ndescription: \"If still unacked after 20 minutes\", type: 20\ndescription: \"If still unacked after 25 minutes\", type: 25\ndescription: \"If still unacked after 30 minutes\", type: 30\ndescription: \"If still unacked after 45 minutes\", type: 45",
+                "operationId": "ApiPublicV1PoliciesTypesTimeoutsGet",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/policies\/{policy}\/oncall\/user": {
+            "patch": {
+                "summary": "Create an on-call override (take on-call)",
+                "description": "Replaces a currently on-call user in the escalation policy with another.  In many cases, the policy slug\nwill match the slug of the team that contains it.\n\nThis API may be called a maximum of 6 times per minute.\n",
+                "operationId": "ApiPublicV1PoliciesPolicyOncallUserPatch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "policy",
+                        "in": "path",
+                        "description": "The VictorOps policy 'slug'"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/profile\/{username}\/policies": {
+            "get": {
+                "summary": "Get the user's paging policy",
+                "description": "Get all the paging policy steps for the user on the org associated with the API key\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1ProfileUsernamePoliciesGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Create a paging policy step",
+                "description": "Create a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1ProfileUsernamePoliciesPost",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/profile\/{username}\/policies\/{step}": {
+            "get": {
+                "summary": "Get a paging policy step",
+                "description": "Get a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1ProfileUsernamePoliciesStepGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Create a rule for a paging policy step",
+                "description": "Create a rule for a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1ProfileUsernamePoliciesStepPost",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "put": {
+                "summary": "Update a paging policy step",
+                "description": "Update a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1ProfileUsernamePoliciesStepPut",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/profile\/{username}\/policies\/{step}\/{rule}": {
+            "delete": {
+                "summary": "Delete a rule from a paging policy step",
+                "description": "Delete a rule from a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1ProfileUsernamePoliciesStepRuleDelete",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "get": {
+                "summary": "Get a rule from a paging policy step",
+                "description": "Get a rule from a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1ProfileUsernamePoliciesStepRuleGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "put": {
+                "summary": "Update a rule for a paging policy step",
+                "description": "Update a rule for a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1ProfileUsernamePoliciesStepRulePut",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/team": {
+            "get": {
+                "summary": "List teams",
+                "description": "Get a list of teams for your organization.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1TeamGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Add a team",
+                "description": "Add a team to your organization.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1TeamPost",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/team\/{team}": {
+            "delete": {
+                "summary": "Remove a team",
+                "description": "Remove a team from your organization.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1TeamTeamDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "The VictorOps team to be deleted"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Retrieve information for a team",
+                "description": "Get the information for the specified team.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1TeamTeamGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "The VictorOps team to be deleted"
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update a team",
+                "description": "Update the designated team\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1TeamTeamPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "The VictorOps team to be deleted"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/team\/{team}\/members": {
+            "get": {
+                "summary": "Retrieve a list of members for a team",
+                "description": "Get the members for the specified team.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1TeamTeamMembersGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "The VictorOps team to be deleted"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Add a team member",
+                "description": "Add a team member to your team.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1TeamTeamMembersPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "The VictorOps team to be deleted"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/team\/{team}\/members\/{user}": {
+            "delete": {
+                "summary": "Remove a team member",
+                "description": "Remove a team from your organization.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1TeamTeamMembersUserDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "The VictorOps team to be deleted"
+                    },
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/team\/{team}\/oncall\/schedule": {
+            "get": {
+                "summary": "Get a team's on-call schedule",
+                "description": "__NOTE: This call is deprecated. Please use `GET \/api-public\/v2\/team\/{team}\/oncall\/schedule`.__\n\nGet the on-call schedule for a team, including on-call overrides.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1TeamTeamOncallScheduleGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "The VictorOps team to be deleted"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/team\/{team}\/oncall\/user": {
+            "patch": {
+                "summary": "Create an on-call override (take on-call)",
+                "description": "__NOTE: This API call is deprecated. Please use `PATCH \/api-public\/v2\/policies\/{policy}\/oncall\/user`__\n\nReplaces a currently on-call user on the team with another.\n\nThis API may be called a maximum of 6 times per minute.\n",
+                "operationId": "ApiPublicV1TeamTeamOncallUserPatch",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "The VictorOps team to be deleted"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/team\/{team}\/policies": {
+            "get": {
+                "summary": "Retrieve a list of escalation policies for a team",
+                "description": "Get the escalation policies for the specified team.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1TeamTeamPoliciesGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "The VictorOps team to be deleted"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/user": {
+            "get": {
+                "summary": "List users",
+                "description": "Get a list of users for your organization\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserGet",
+                "deprecated": 0,
+                "parameters": []
+            },
+            "post": {
+                "summary": "Add a user",
+                "description": "Add a user to your organization\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserPost",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/api-public\/v1\/user\/{user}": {
+            "delete": {
+                "summary": "Remove a user",
+                "description": "Remove a user from your organization\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Retrieve information for a user",
+                "description": "Get the information for the specified user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update a user",
+                "description": "Update the designated user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/user\/{user}\/contact-methods": {
+            "get": {
+                "summary": "Get a list of all contact methods for a user",
+                "description": "Get the contact methods for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/user\/{user}\/contact-methods\/devices": {
+            "get": {
+                "summary": "Get a list of all contact devices for a user",
+                "description": "Get the contact methods for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsDevicesGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/user\/{user}\/contact-methods\/devices\/{contactId}": {
+            "delete": {
+                "summary": "Delete a contact device for a user",
+                "description": "Delete a contact device for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsDevicesContactIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    },
+                    {
+                        "name": "contactId",
+                        "in": "path",
+                        "description": "The unique contact identifier"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get the indicated contact device for a user",
+                "description": "Get the indicated contact device for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsDevicesContactIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    },
+                    {
+                        "name": "contactId",
+                        "in": "path",
+                        "description": "The unique contact identifier"
+                    }
+                ]
+            },
+            "put": {
+                "summary": "Update a contact device for a user",
+                "description": "Update a contact device for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsDevicesContactIdPut",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    },
+                    {
+                        "name": "contactId",
+                        "in": "path",
+                        "description": "The unique contact identifier"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/user\/{user}\/contact-methods\/emails": {
+            "get": {
+                "summary": "Get a list of all contact emails for a user",
+                "description": "Get the contact emails for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsEmailsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a contact emails for a user",
+                "description": "Create a contact email for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsEmailsPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/user\/{user}\/contact-methods\/emails\/{contactId}": {
+            "delete": {
+                "summary": "Delete a contact email for a user",
+                "description": "Delete the indicated contact email for the user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsEmailsContactIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    },
+                    {
+                        "name": "contactId",
+                        "in": "path",
+                        "description": "The unique contact identifier"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get the indicate contact email for a user",
+                "description": "Get the indicated contact email for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsEmailsContactIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    },
+                    {
+                        "name": "contactId",
+                        "in": "path",
+                        "description": "The unique contact identifier"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/user\/{user}\/contact-methods\/phones": {
+            "get": {
+                "summary": "Get a list of all contact phones for a user",
+                "description": "Get the contact phones for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsPhonesGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a contact phones for a user",
+                "description": "Create a contact phone for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsPhonesPost",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/user\/{user}\/contact-methods\/phones\/{contactId}": {
+            "delete": {
+                "summary": "Delete a contact phone for a user",
+                "description": "Delete the indicated contact phone for the user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsPhonesContactIdDelete",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    },
+                    {
+                        "name": "contactId",
+                        "in": "path",
+                        "description": "The unique contact identifier"
+                    }
+                ]
+            },
+            "get": {
+                "summary": "Get the indicate contact phone for a user",
+                "description": "Get the indicated contact phone for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserContactMethodsPhonesContactIdGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    },
+                    {
+                        "name": "contactId",
+                        "in": "path",
+                        "description": "The unique contact identifier"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/user\/{user}\/oncall\/schedule": {
+            "get": {
+                "summary": "Get a user's on-call schedule",
+                "description": "__NOTE: This call is deprecated. Please use `GET \/api-public\/v2\/user\/{user}\/oncall\/schedule`.__\n\nGet the on-call schedule for a user for all teams, including on-call overrides.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserOncallScheduleGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v1\/user\/{user}\/policies": {
+            "get": {
+                "summary": "Get a list of paging policies for a user",
+                "description": "Get paging policies for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV1UserUserPoliciesGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v2\/team\/{team}\/oncall\/schedule": {
+            "get": {
+                "summary": "Get a team's on-call schedule",
+                "description": "Get the on-call schedule for a team, including on-call overrides.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV2TeamTeamOncallScheduleGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "The VictorOps team to be deleted"
+                    }
+                ]
+            }
+        },
+        "\/api-public\/v2\/user\/{user}\/oncall\/schedule": {
+            "get": {
+                "summary": "Get a user's on-call schedule",
+                "description": "Get the on-call schedule for a user for all teams the user is on, including on-call overrides.\n\nThis API may be called a maximum of 15 times per minute.\n",
+                "operationId": "ApiPublicV2UserUserOncallScheduleGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "path",
+                        "description": "The team member username"
+                    }
+                ]
+            }
+        },
+        "\/api-reporting\/v1\/incidents": {
+            "get": {
+                "summary": "Get\/search incident history",
+                "description": "\n__NOTE: This call is deprecated. Please use `GET \/api-reporting\/v2\/incidents`.__\n\nRetrieve incident history for your company, searching over date ranges and with filtering options.  This is historical\ndata, and may be up to 15 minutes behind real-time incident data.  By default, only resolved incidents will be returned.\n\nThis API may be called a maximum of once a minute.\n\nIncident requests are paginated with a offset and limit query string parameters.\n  The query for incidents is run and offset",
+                "operationId": "ApiReportingV1IncidentsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "entityId",
+                        "in": "query",
+                        "description": "The entity ID involved  This is the unique identifier for the entity causing the incident."
+                    },
+                    {
+                        "name": "incidentNumber",
+                        "in": "query",
+                        "description": "The incident number as shown in VictorOps Multiple values and ranges are allowed: 4,5,20:50\n"
+                    },
+                    {
+                        "name": "startedAfter",
+                        "in": "query",
+                        "description": "Return incidents started after this timestamp Specify the timestamp in ISO8601 format"
+                    },
+                    {
+                        "name": "startedBefore",
+                        "in": "query",
+                        "description": "Find incidents started before this timestamp  Specify the timestamp in ISO8601 format"
+                    },
+                    {
+                        "name": "host",
+                        "in": "query",
+                        "description": "The host involved in the incident Multiple values can be separated with commas."
+                    },
+                    {
+                        "name": "service",
+                        "in": "query",
+                        "description": "The service involved in the incident (if any) Multiple values can be separated with commas."
+                    },
+                    {
+                        "name": "currentPhase",
+                        "in": "query",
+                        "description": "The current phase of the incident \"resolved\", \"triggered\" or \"acknowledged\". Multiple values can be separated with commas."
+                    }
+                ]
+            }
+        },
+        "\/api-reporting\/v1\/team\/{team}\/oncall\/log": {
+            "get": {
+                "summary": "A list of shift changes for a team",
+                "description": "Returns a log of user shift changes for the specified team. This is historical\ndata, and may be up to 15 minutes behind real-time log data.\n\nThis API may be called a maximum of 6 times per minute.\n",
+                "operationId": "ApiReportingV1TeamTeamOncallLogGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "team",
+                        "in": "path",
+                        "description": "The VictorOps team to be deleted"
+                    },
+                    {
+                        "name": "start",
+                        "in": "query",
+                        "description": "Return shift changes occurring after this timestamp. The default is the start of the day at midnight. Specify the timestamp in ISO8601 format"
+                    },
+                    {
+                        "name": "end",
+                        "in": "query",
+                        "description": "Return shift changes occurring before this timestamp. The default is the end of the day at 11:59:59. Specify the timestamp in ISO8601 format"
+                    },
+                    {
+                        "name": "userName",
+                        "in": "query",
+                        "description": "The VictorOps user ID. Return shift changes occurring during the interval specified for this user. Without this parameter, all relevant users (with respect to the specified interval) are returned"
+                    }
+                ]
+            }
+        },
+        "\/api-reporting\/v2\/incidents": {
+            "get": {
+                "summary": "Get\/search incident history",
+                "description": "Retrieve incident history for your company, searching over date ranges and with filtering options.\n\nThis API may be called a maximum of once a minute.\n\nIncident requests are paginated with a offset and limit query string parameters.\n  The query for incidents is run and offset records are skipped, after which limit records will be returned.\n\nThe default offset is 0 and the default limit is 20. The maximum value allowed for limit is 100.\n\nUnless specified otherwise with the parameter currentPhase,",
+                "operationId": "ApiReportingV2IncidentsGet",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "entityId",
+                        "in": "query",
+                        "description": "The entity ID involved  This is the unique identifier for the entity causing the incident."
+                    },
+                    {
+                        "name": "incidentNumber",
+                        "in": "query",
+                        "description": "The incident number as shown in VictorOps Multiple values and ranges are allowed: 4,5,20:50\n"
+                    },
+                    {
+                        "name": "startedAfter",
+                        "in": "query",
+                        "description": "Return incidents started after this timestamp Specify the timestamp in ISO8601 format"
+                    },
+                    {
+                        "name": "startedBefore",
+                        "in": "query",
+                        "description": "Find incidents started before this timestamp  Specify the timestamp in ISO8601 format"
+                    },
+                    {
+                        "name": "host",
+                        "in": "query",
+                        "description": "The host involved in the incident Multiple values can be separated with commas."
+                    },
+                    {
+                        "name": "service",
+                        "in": "query",
+                        "description": "The service involved in the incident (if any) Multiple values can be separated with commas."
+                    },
+                    {
+                        "name": "currentPhase",
+                        "in": "query",
+                        "description": "The current phase of the incident \"resolved\", \"triggered\" or \"acknowledged\". Multiple values can be separated with commas."
+                    },
+                    {
+                        "name": "routingKey",
+                        "in": "query",
+                        "description": "The original routing of the incident"
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "AckOrResolveByUserRequest": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AckOrResolveRequest": {
+                "type": "object",
+                "properties": {
+                    "incidentNames": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AckOrResolveResponse": {
+                "type": "object",
+                "properties": {
+                    "results": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AckOrResolveResult": {
+                "type": "object",
+                "properties": {
+                    "cmdAccepted": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "entityId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "incidentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AckUser": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "first": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "last": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ActiveIncidentInfo": {
+                "type": "object",
+                "properties": {
+                    "alertCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "currentPhase": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "entityId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "host": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "incidentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastAlertId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastAlertTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "pagedPolicies": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "pagedTeams": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "pagedUsers": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "service": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "startTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "transitions": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ActiveIncidentList": {
+                "type": "object",
+                "properties": {
+                    "incidents": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AddGroupPayload": {
+                "type": "object",
+                "properties": {
+                    "rules": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AddStepPayload": {
+                "type": "object"
+            },
+            "AddTeamMemberPayload": {
+                "type": "object",
+                "properties": {
+                    "userName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AddTeamPayload": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AddUserPayload": {
+                "type": "object",
+                "properties": {
+                    "admin": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "expirationHours": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AlertBatchResponse": {
+                "type": "object",
+                "properties": {
+                    "alerts": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "requestId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "requestSize": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "responseSize": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "AlertRequest": {
+                "type": "object",
+                "properties": {
+                    "alertId": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Contact": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ContactDevice": {
+                "type": "object",
+                "properties": {
+                    "_selfUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "deviceType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "extId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "label": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ContactDeviceAdd": {
+                "type": "object",
+                "properties": {
+                    "chat_escalation_sound": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "device_label": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "escalation_notification_sound": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "resolved_notification_sound": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ContactEmailAdd": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "label": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rank": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ContactObject": {
+                "type": "object"
+            },
+            "ContactPhoneAdd": {
+                "type": "object",
+                "properties": {
+                    "label": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "phone": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rank": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateBatchAlertRequestPayload": {
+                "type": "object",
+                "properties": {
+                    "alertIds": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreateIncidentRequest": {
+                "type": "object",
+                "properties": {
+                    "details": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "summary": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "targets": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "CreatedIncident": {
+                "type": "object",
+                "properties": {
+                    "error": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "incidentNumber": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "DeleteUserPayload": {
+                "type": "object",
+                "properties": {
+                    "replacement": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "EscalationPolicy": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "slug": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "EscalationPolicyInfo": {
+                "type": "object"
+            },
+            "EscalationPolicyInfoList": {
+                "type": "object",
+                "properties": {
+                    "policies": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "EscalationPolicyList": {
+                "type": "object",
+                "properties": {
+                    "policies": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "GetAlertResponse": {
+                "type": "object",
+                "properties": {
+                    "ackAuthor": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ackMsg": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "entityDisplayName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "entityId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "messageType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "monitoringTool": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "raw": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stateMessage": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "stateStartTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "timestamp": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "IncidentInfo": {
+                "type": "object",
+                "properties": {
+                    "ackTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "ackUserId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "alertCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "currentPhase": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "endTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "entityDispName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "entityId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "entityType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "host": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "incidentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastAlertId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastAlertTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "service": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "startTime": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "teams": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "IncidentList": {
+                "type": "object",
+                "properties": {
+                    "incidents": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "IncidentTarget": {
+                "type": "object",
+                "properties": {
+                    "slug": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "IncidentTransition": {
+                "type": "object",
+                "properties": {
+                    "alertId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "alertUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "at": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "by": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "manually": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ListRoutingKeysResponse": {
+                "type": "object",
+                "properties": {
+                    "_selfUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "routingKeys": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ListTeamMembersResponse": {
+                "type": "object",
+                "properties": {
+                    "_selfUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "_teamUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "members": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "ListUserResponse": {
+                "type": "object",
+                "properties": {
+                    "_selfUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "users": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "NotificationObject": {
+                "type": "object"
+            },
+            "OnCallAndOverrides": {
+                "type": "object",
+                "properties": {
+                    "overrides": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "schedule": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "team": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OnCallEntry": {
+                "type": "object",
+                "properties": {
+                    "rolls": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rotationName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "shiftName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "shiftRoll": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OnCallEscalationPolicyResource": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "slug": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OnCallInterval": {
+                "type": "object",
+                "properties": {
+                    "duration": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "off": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "on": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OnCallLog": {
+                "type": "object",
+                "properties": {
+                    "end": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "teamSlug": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userLogs": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OnCallNowResource": {
+                "type": "object",
+                "properties": {
+                    "users": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OnCallOverride": {
+                "type": "object",
+                "properties": {
+                    "end": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OnCallRoll": {
+                "type": "object",
+                "properties": {
+                    "end": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "isRoll": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OnCallTeamResource": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "slug": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OnCallTeamsResource": {
+                "type": "object",
+                "properties": {
+                    "onCallNow": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "OnCallUsersResource": {
+                "type": "object",
+                "properties": {
+                    "onCallUser": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PagingPolicy": {
+                "type": "object",
+                "properties": {
+                    "contactType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "extId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "order": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "timeout": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PagingPolicyStep": {
+                "type": "object",
+                "properties": {
+                    "index": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rules": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PagingPolicyStepRule": {
+                "type": "object",
+                "properties": {
+                    "index": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PagingPolicyStepRuleAdd": {
+                "type": "object"
+            },
+            "Policies": {
+                "type": "object",
+                "properties": {
+                    "policies": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "PolicySchedule": {
+                "type": "object",
+                "properties": {
+                    "overrides": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "schedule": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "RelLink": {
+                "type": "object",
+                "properties": {
+                    "href": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rel": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "RemoveTeamMemberPayload": {
+                "type": "object",
+                "properties": {
+                    "replacement": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Reroute": {
+                "type": "object",
+                "properties": {
+                    "incidentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "targets": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "RerouteCollection": {
+                "type": "object",
+                "properties": {
+                    "reroutes": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "RerouteStatus": {
+                "type": "object",
+                "properties": {
+                    "incidentNumber": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "targetStatus": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "RerouteStatusResponse": {
+                "type": "object",
+                "properties": {
+                    "statuses": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "RerouteTargetStatus": {
+                "type": "object",
+                "properties": {
+                    "message": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "slug": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "success": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "RoutingKeyInfo": {
+                "type": "object",
+                "properties": {
+                    "isDefault": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "routingKey": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "targets": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "RoutingKeyTarget": {
+                "type": "object",
+                "properties": {
+                    "_teamUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policyName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policySlug": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TakeRequest": {
+                "type": "object",
+                "properties": {
+                    "fromUser": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "toUser": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TakeResult": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "Team": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "slug": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TeamAndPolicies": {
+                "type": "object",
+                "properties": {
+                    "policies": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TeamDetail": {
+                "type": "object",
+                "properties": {
+                    "_membersUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "_policiesUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "_selfUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "isDefaultTeam": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "memberCount": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "slug": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TeamMember": {
+                "type": "object",
+                "properties": {
+                    "firstName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "verified": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TeamSchedule": {
+                "type": "object",
+                "properties": {
+                    "schedules": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TeamScheduleOverlayResource": {
+                "type": "object",
+                "properties": {
+                    "end": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "orig": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "over": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "start": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TeamScheduleResource": {
+                "type": "object",
+                "properties": {
+                    "oncall": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "overrideoncall": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "policyType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rolls": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "rotationName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "shiftName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "shiftRoll": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TeamScheduleRollResource": {
+                "type": "object",
+                "properties": {
+                    "change": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "isRoll": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "oncall": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "until": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "TimeoutObject": {
+                "type": "object"
+            },
+            "User": {
+                "type": "object",
+                "properties": {
+                    "userName": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UserContact": {
+                "type": "object",
+                "properties": {
+                    "_selfUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "deviceType": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "extId": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "label": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UserLog": {
+                "type": "object",
+                "properties": {
+                    "adjustedTotal": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "log": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "total": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userId": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "UserSchedule": {
+                "type": "object",
+                "properties": {
+                    "teamSchedules": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            },
+            "V1User": {
+                "type": "object",
+                "properties": {
+                    "_selfUrl": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "createdAt": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "email": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "passwordLastUpdated": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "userName": {
+                        "description": "",
+                        "type": "get"
+                    },
+                    "verified": {
+                        "description": "",
+                        "type": "get"
+                    }
+                }
+            }
+        }
+    }
+}
