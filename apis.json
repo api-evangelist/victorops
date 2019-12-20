@@ -1,0 +1,155 @@
+{
+    "name": "VictorOps",
+    "description": "VictorOps incident managament software gives DevOps observability, collaboration, & real-time alerting, to build, deploy, & operate software. Learn more.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/20023-victorops.jpg",
+    "tags": [
+        "have api",
+        "have swagger",
+        "orchestration",
+        "relative data",
+        "service api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/victorops\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "VictorOps API",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/20023-victorops.jpg",
+            "humanURL": "http:\/\/victorops.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/victorops-api.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/victorops-api-postman-collection.json"
+                }
+            ]
+        },
+        {
+            "name": "Victor Ops",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/20023-victorops.jpg",
+            "humanURL": "http:\/\/victorops.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/victor-ops.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/victor-ops-postman-collection.json"
+                }
+            ]
+        },
+        {
+            "name": "VictorOps",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/20023-victorops.jpg",
+            "humanURL": "http:\/\/victorops.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/victorops.json"
+                },
+                {
+                    "type": "x-postman-collecction",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/victorops-postman-collection.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Blog",
+            "url": "https:\/\/victorops.com\/blog\/"
+        },
+        {
+            "type": "Blog RSS",
+            "url": "https:\/\/victorops.com\/feed\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/victorops"
+        },
+        {
+            "type": "Email",
+            "url": "support@victorops.com"
+        },
+        {
+            "type": "Email",
+            "url": "info@victorops.com"
+        },
+        {
+            "type": "Email",
+            "url": "press@victorops.com"
+        },
+        {
+            "type": "Email",
+            "url": "sales@victorops.com"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/victorops"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/20023-2019-09-03-21-43-52.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/20023-2019-09-03-21-50-09.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/20023-2019-09-03-21-50-18.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/20023-2019-09-03-21-50-51.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/20023-2019-09-02-21-32-09.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/20023-2019-09-02-21-52-35.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/20023-2019-09-02-21-52-46.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/20023-2019-09-03-19-21-17.json"
+        },
+        {
+            "type": "Pricing",
+            "url": "https:\/\/victorops.com\/pricing\/"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/VictorOps"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/victorops.com"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/victorops.com"
+        }
+    ]
+}
