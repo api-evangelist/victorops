@@ -1,0 +1,1810 @@
+{
+    "id": "14fefeb2b9706c62684ddf951f1a0431",
+    "name": "Victor Ops",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "5264aab74364e0fda68a80a1695af204",
+            "name": "Retrieve alert details.",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/alerts\/{uuid}",
+            "description": "Retrieve the details of an alert that was sent VictorOps by you.\n\nThis API may be called a maximum of 6 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "uuid",
+                    "description": "The VictorOps uuid of the alert",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "21db7bf693ca98e7eac76f97c86ca00c",
+            "name": "Get current incident information",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents",
+            "description": "Get a list of the currently open, acknowledged and recently resolved incidents.\nThis API may be called a maximum of 6 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "5c818e5410e73f56c758eab9fa9948a2",
+            "name": "Create a new incident",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents",
+            "description": "Create a new incident.\n\nThis call replicates the function of our\nmanual incident creation process.\nMonitoring tools and custom integrations\nshould be configured using our\nREST Endpoint.\n\nThis API may be called a maximum of 6 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "04b136cff8f4f1f19b80c36f2127cb8c",
+            "name": "Acknowledge an incident or list of incidents",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents\/ack",
+            "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 6 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "de6e108eff298620b8ea27e58291938c",
+            "name": "Acknowledge all incidents for which a user was paged.",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents\/byUser\/ack",
+            "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 6 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "baa3bfc602368a212314c91daa8ead05",
+            "name": "Resolve all incidents for which a user was paged.",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents\/byUser\/resolve",
+            "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 6 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "ed92b4c3af91f7e0b522cfc047e9924b",
+            "name": "Reroute one or more incidents to one or more new routable destinations.",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents\/reroute",
+            "description": "Reroute one or more incidents to one or more users and\/or escalation policies\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "c87dfc8f64a00f4c6e5618428186f85c",
+            "name": "Resolve an incident or list of incidents",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents\/resolve",
+            "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 6 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "1b6b21d80ddb04a8439e447f03790fb1",
+            "name": "Get an organization's on-call users",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/oncall\/current",
+            "description": "Get all on-call uesrs\/teams for your organization.\n\nThis API may be called a maximum of 1 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "82acc0245ea9bec2b885c61ace59a06b",
+            "name": "List routing keys with associated teams",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/org\/routing-keys",
+            "description": "Retrieves a list of routing keys and associated teams.\nThis API may be called a maximum of once a minute.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "ba7fe29de0ee08f3f4eceed332ca17b8",
+            "name": "Get escalation policy info",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/policies",
+            "description": "Retrieves a list of escalation policy information.\nThis API may be called a maximum of once a minute",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "bfa885fcedd5ef1ee7066460ba010831",
+            "name": "Get the available contact types",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/policies\/types\/contacts",
+            "description": "Get the available contact types\n\ndescription: \"Email Address\", type: \"email\"\ndescription: \"Phone Number\", type: \"phone\"\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "39e1cc6b4ef0cc9508e48dad2ff05636",
+            "name": "Get the available notification types",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/policies\/types\/notifications",
+            "description": "Get the available notification types\n\ndescription: \"Send a push notification to all my devices\", type: \"push\"\ndescription: \"Send an email to an email address\", type: \"email\"\ndescription: \"Send an SMS to a phone number\", type: \"sms\"\ndescription: \"Make a phone call to a phone number\", type: \"phone\"\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "a4ec994c574ba507be01cfeee8cba1e0",
+            "name": "Get the available timeout values",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/policies\/types\/timeouts",
+            "description": "Get the available timeout values\n\ndescription: \"If still unacked after 1 minute\", type: 1\ndescription: \"If still unacked after 5 minutes\", type: 5\ndescription: \"If still unacked after 10 minutes\", type: 10\ndescription: \"If still unacked after 15 minutes\", type: 15\ndescription: \"If still unacked after 20 minutes\", type: 20\ndescription: \"If still unacked after 25 minutes\", type: 25\ndescription: \"If still unacked after 30 minutes\", type: 30\ndescription: \"If still unacked after 45 minutes\", type: 45",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "5947c7789408f7ba6fbaba795486b17d",
+            "name": "Create an on-call override (take on-call)",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/policies\/{policy}\/oncall\/user",
+            "description": "Replaces a currently on-call user in the escalation policy with another.  In many cases, the policy slug\nwill match the slug of the team that contains it.\n\nThis API may be called a maximum of 6 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "policy",
+                    "description": "The VictorOps policy 'slug'",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "3d0f42a4a694dee2859d0ccfe5172ef5",
+            "name": "Get the user's paging policy",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies",
+            "description": "Get all the paging policy steps for the user on the org associated with the API key\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "eefd0c4a11dd9d4ba1db855de05ed5af",
+            "name": "Create a paging policy step",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies",
+            "description": "Create a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "5ae6c77a36b6b5da56f680fc24ac3d30",
+            "name": "Get a paging policy step",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}",
+            "description": "Get a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "ad8b54c48f8ac650d4b86c4914da139c",
+            "name": "Create a rule for a paging policy step",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}",
+            "description": "Create a rule for a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "78fbf4541e6ed5632f9c5e99795801ea",
+            "name": "Update a paging policy step",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}",
+            "description": "Update a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "f36dfdaa0efbbdfcb04ecc8d837c2200",
+            "name": "Delete a rule from a paging policy step",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}\/{rule}",
+            "description": "Delete a rule from a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "f4f7a2b04635d7d84430216ca4cac4b1",
+            "name": "Get a rule from a paging policy step",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}\/{rule}",
+            "description": "Get a rule from a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "8aece68272da734c2bdf581447966d36",
+            "name": "Update a rule for a paging policy step",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}\/{rule}",
+            "description": "Update a rule for a paging policy step\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "b761b1ab2c7c7fa535c5cd9531178d81",
+            "name": "List teams",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/team",
+            "description": "Get a list of teams for your organization.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "1a78cfb4586a63f11470365c21209a5c",
+            "name": "Add a team",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/team",
+            "description": "Add a team to your organization.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "9b88a0c83e01506640c1eb7b377f6a72",
+            "name": "Remove a team",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}",
+            "description": "Remove a team from your organization.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "team",
+                    "description": "The VictorOps team to be deleted",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "8e671caca078456f5780964d6e541dde",
+            "name": "Retrieve information for a team",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}",
+            "description": "Get the information for the specified team.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "team",
+                    "description": "The VictorOps team to be deleted",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "4ae7033e7aaf96be1b979804454f926b",
+            "name": "Update a team",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}",
+            "description": "Update the designated team\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "team",
+                    "description": "The VictorOps team to be deleted",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "61fde1e76ac1405d485d6ee66649ac2c",
+            "name": "Retrieve a list of members for a team",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/members",
+            "description": "Get the members for the specified team.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "team",
+                    "description": "The VictorOps team to be deleted",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "4bd48052758cec4aeeb89f2971d67246",
+            "name": "Add a team member",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/members",
+            "description": "Add a team member to your team.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "team",
+                    "description": "The VictorOps team to be deleted",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "e1a1ab09a0e6e42a9e7b5297e157f246",
+            "name": "Remove a team member",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/members\/{user}",
+            "description": "Remove a team from your organization.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "team",
+                    "description": "The VictorOps team to be deleted",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "f3da090b50bd80098120f1138d2b3325",
+            "name": "Get a team's on-call schedule",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/oncall\/schedule",
+            "description": "__NOTE: This call is deprecated. Please use `GET \/api-public\/v2\/team\/{team}\/oncall\/schedule`.__\n\nGet the on-call schedule for a team, including on-call overrides.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "team",
+                    "description": "The VictorOps team to be deleted",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "198a7a84166c02d7eb775e42e7e22670",
+            "name": "Create an on-call override (take on-call)",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/oncall\/user",
+            "description": "__NOTE: This API call is deprecated. Please use `PATCH \/api-public\/v2\/policies\/{policy}\/oncall\/user`__\n\nReplaces a currently on-call user on the team with another.\n\nThis API may be called a maximum of 6 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "patch",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "team",
+                    "description": "The VictorOps team to be deleted",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "a8d1e3af2edced42023a23e2f8513e86",
+            "name": "Retrieve a list of escalation policies for a team",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/policies",
+            "description": "Get the escalation policies for the specified team.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "team",
+                    "description": "The VictorOps team to be deleted",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "b0c88b12fa53db7c4b8bc5cf1ef38ce2",
+            "name": "List users",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user",
+            "description": "Get a list of users for your organization\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "839424af2ff3553cf6f5df717e150206",
+            "name": "Add a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user",
+            "description": "Add a user to your organization\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "30f53a03b46450b56f4348e94a27828c",
+            "name": "Remove a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}",
+            "description": "Remove a user from your organization\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "f5bb7186ef7229690ce17d460a3bc24f",
+            "name": "Retrieve information for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}",
+            "description": "Get the information for the specified user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "04a63c19470e3effe3075fd8a57dccb9",
+            "name": "Update a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}",
+            "description": "Update the designated user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "fcf1f43dd693387b7b8904bec4b5d5be",
+            "name": "Get a list of all contact methods for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods",
+            "description": "Get the contact methods for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "39aceed34098e1cac4247ae57245d992",
+            "name": "Get a list of all contact devices for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/devices",
+            "description": "Get the contact methods for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "22c50e1a3cf3482f81eab9e2e3776c5f",
+            "name": "Delete a contact device for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/devices\/{contactId}",
+            "description": "Delete a contact device for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "contactId",
+                    "description": "The unique contact identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "a0191c6d3a83e9dc56e45dd90c2bbf4a",
+            "name": "Get the indicated contact device for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/devices\/{contactId}",
+            "description": "Get the indicated contact device for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "contactId",
+                    "description": "The unique contact identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "36436af918c58a68346e177688098133",
+            "name": "Update a contact device for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/devices\/{contactId}",
+            "description": "Update a contact device for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "contactId",
+                    "description": "The unique contact identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "16953ecf47ce21cefeaf7dd63829a521",
+            "name": "Get a list of all contact emails for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/emails",
+            "description": "Get the contact emails for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "8b1b6748a1d8775569b63c8a92aa3068",
+            "name": "Create a contact emails for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/emails",
+            "description": "Create a contact email for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "2f808e175f47be293e6c609960614c55",
+            "name": "Delete a contact email for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/emails\/{contactId}",
+            "description": "Delete the indicated contact email for the user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "contactId",
+                    "description": "The unique contact identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "10324229c37f9507370ed91a9f556f38",
+            "name": "Get the indicate contact email for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/emails\/{contactId}",
+            "description": "Get the indicated contact email for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "contactId",
+                    "description": "The unique contact identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "9316a4c4a72d9f3a59dca43d523b7619",
+            "name": "Get a list of all contact phones for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/phones",
+            "description": "Get the contact phones for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "ce45d8c2f89f482e4dd34d3316c69aad",
+            "name": "Create a contact phones for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/phones",
+            "description": "Create a contact phone for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "post",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "b58349a44b82f214239aabcac3861cd4",
+            "name": "Delete a contact phone for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/phones\/{contactId}",
+            "description": "Delete the indicated contact phone for the user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "delete",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "contactId",
+                    "description": "The unique contact identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "b5a9e3f3bb2526b2e4334ebffa525c4f",
+            "name": "Get the indicate contact phone for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/phones\/{contactId}",
+            "description": "Get the indicated contact phone for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "contactId",
+                    "description": "The unique contact identifier",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "fafbca4f9a3e0256e9a55c4a6e3debdb",
+            "name": "Get a user's on-call schedule",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/oncall\/schedule",
+            "description": "__NOTE: This call is deprecated. Please use `GET \/api-public\/v2\/user\/{user}\/oncall\/schedule`.__\n\nGet the on-call schedule for a user for all teams, including on-call overrides.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "824c64a46bbda96fd4c9640eb9aafe27",
+            "name": "Get a list of paging policies for a user",
+            "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/policies",
+            "description": "Get paging policies for a user\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "421a072b96b2d09a0a85d39a08e427b4",
+            "name": "Get a team's on-call schedule",
+            "url": "httpsapi.victorops.com\/\/api-public\/v2\/team\/{team}\/oncall\/schedule",
+            "description": "Get the on-call schedule for a team, including on-call overrides.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "team",
+                    "description": "The VictorOps team to be deleted",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "47c29563c2fe9f2ff93d3d60a7cceed3",
+            "name": "Get a user's on-call schedule",
+            "url": "httpsapi.victorops.com\/\/api-public\/v2\/user\/{user}\/oncall\/schedule",
+            "description": "Get the on-call schedule for a user for all teams the user is on, including on-call overrides.\n\nThis API may be called a maximum of 15 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "user",
+                    "description": "The team member username",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "d9259cca6c66ab08c3c8665c142c66ca",
+            "name": "Get\/search incident history",
+            "url": "httpsapi.victorops.com\/\/api-reporting\/v1\/incidents",
+            "description": "\n__NOTE: This call is deprecated. Please use `GET \/api-reporting\/v2\/incidents`.__\n\nRetrieve incident history for your company, searching over date ranges and with filtering options.  This is historical\ndata, and may be up to 15 minutes behind real-time incident data.  By default, only resolved incidents will be returned.\n\nThis API may be called a maximum of once a minute.\n\nIncident requests are paginated with a offset and limit query string parameters.\n  The query for incidents is run and offset",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "entityId",
+                    "description": "The entity ID involved  This is the unique identifier for the entity causing the incident.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "incidentNumber",
+                    "description": "The incident number as shown in VictorOps Multiple values and ranges are allowed: 4,5,20:50\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startedAfter",
+                    "description": "Return incidents started after this timestamp Specify the timestamp in ISO8601 format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startedBefore",
+                    "description": "Find incidents started before this timestamp  Specify the timestamp in ISO8601 format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "host",
+                    "description": "The host involved in the incident Multiple values can be separated with commas.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "service",
+                    "description": "The service involved in the incident (if any) Multiple values can be separated with commas.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "currentPhase",
+                    "description": "The current phase of the incident \"resolved\", \"triggered\" or \"acknowledged\". Multiple values can be separated with commas.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "21f1ddb836a690852e4f2ef8c78e2d1d",
+            "name": "A list of shift changes for a team",
+            "url": "httpsapi.victorops.com\/\/api-reporting\/v1\/team\/{team}\/oncall\/log",
+            "description": "Returns a log of user shift changes for the specified team. This is historical\ndata, and may be up to 15 minutes behind real-time log data.\n\nThis API may be called a maximum of 6 times per minute.\n",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "team",
+                    "description": "The VictorOps team to be deleted",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "start",
+                    "description": "Return shift changes occurring after this timestamp. The default is the start of the day at midnight. Specify the timestamp in ISO8601 format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "end",
+                    "description": "Return shift changes occurring before this timestamp. The default is the end of the day at 11:59:59. Specify the timestamp in ISO8601 format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "userName",
+                    "description": "The VictorOps user ID. Return shift changes occurring during the interval specified for this user. Without this parameter, all relevant users (with respect to the specified interval) are returned",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        },
+        {
+            "id": "f141e5a8e5724731fd6034745039c623",
+            "name": "Get\/search incident history",
+            "url": "httpsapi.victorops.com\/\/api-reporting\/v2\/incidents",
+            "description": "Retrieve incident history for your company, searching over date ranges and with filtering options.\n\nThis API may be called a maximum of once a minute.\n\nIncident requests are paginated with a offset and limit query string parameters.\n  The query for incidents is run and offset records are skipped, after which limit records will be returned.\n\nThe default offset is 0 and the default limit is 20. The maximum value allowed for limit is 100.\n\nUnless specified otherwise with the parameter currentPhase,",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "entityId",
+                    "description": "The entity ID involved  This is the unique identifier for the entity causing the incident.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "incidentNumber",
+                    "description": "The incident number as shown in VictorOps Multiple values and ranges are allowed: 4,5,20:50\n",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startedAfter",
+                    "description": "Return incidents started after this timestamp Specify the timestamp in ISO8601 format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "startedBefore",
+                    "description": "Find incidents started before this timestamp  Specify the timestamp in ISO8601 format",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "host",
+                    "description": "The host involved in the incident Multiple values can be separated with commas.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "service",
+                    "description": "The service involved in the incident (if any) Multiple values can be separated with commas.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "currentPhase",
+                    "description": "The current phase of the incident \"resolved\", \"triggered\" or \"acknowledged\". Multiple values can be separated with commas.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "routingKey",
+                    "description": "The original routing of the incident",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "14fefeb2b9706c62684ddf951f1a0431",
+            "rawModeData": ""
+        }
+    ]
+}
