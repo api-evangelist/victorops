@@ -1,5 +1,5 @@
 {
-    "id": "eef4a95ff8429dbab00446705980336c",
+    "id": "1e9803915a4431889829386c95e50adf",
     "name": "VictorOps API",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "c96d2dd92dbbe7defa4b8a615edc07b0",
+            "id": "e860406401e94c983b22cc2ac2ed9eb5",
             "name": "Add a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user",
             "description": "Add a user to your organization\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "9ce7b33c8055ffa983bd1bd292ee9a4b",
+            "id": "e59eefa5d9a25c71288dc1a4a336409f",
             "name": "List users",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user",
             "description": "Get a list of users for your organization\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -68,11 +68,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "8efd0fd3c01ae4587c5b853bb7596288",
+            "id": "afd3748393fc428b4177b527cd2f6cc2",
             "name": "Retrieve information for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}",
             "description": "Get the information for the specified user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -106,11 +106,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "68a18b5829a4b866f2b2e62a30c1932b",
+            "id": "3ae676f1de248fd3b85eb46e3846064f",
             "name": "Update a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}",
             "description": "Update the designated user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -144,11 +144,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "9d03173c831f1de73466849d0a1323f5",
+            "id": "9a04ca2ec1dd4123a9585e40fcebbca3",
             "name": "Remove a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}",
             "description": "Remove a user from your organization. If no replacement is specified, an empty JSON payload (\"{}\") is still required.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -182,11 +182,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "520f93a92833dab9ebc0620a831f0987",
+            "id": "39547a2a7015fabfe80ca43b2ad17482",
             "name": "Retrieve the user's team membership",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/teams",
             "description": "This API may be called a maximum of 60 times per minute.\n",
@@ -220,11 +220,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "24dda87d3e41c9ba534e74e74946fe11",
+            "id": "f30d825c601ef8147fc0b895b286cfb7",
             "name": "Get the available notification types",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/policies\/types\/notifications",
             "description": "Get the available notification types\n\ndescription: \"Send a push notification to all my devices\", type: \"push\"\ndescription: \"Send an email to an email address\", type: \"email\"\ndescription: \"Send an SMS to a phone number\", type: \"sms\"\ndescription: \"Make a phone call to a phone number\", type: \"phone\"\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -251,11 +251,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "3fb47894d7ffdfdaf2fdd5b389d4422d",
+            "id": "182ed954e888f078a24f3f7aaa019a0c",
             "name": "Get the available contact types",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/policies\/types\/contacts",
             "description": "Get the available contact types\n\ndescription: \"Email Address\", type: \"email\"\ndescription: \"Phone Number\", type: \"phone\"\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -282,11 +282,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "a0ab7d6f66201ffd8f4c90768faae0e1",
+            "id": "f94c19461407d38ccaea06b1b52949a6",
             "name": "Get the available timeout values",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/policies\/types\/timeouts",
             "description": "Get the available timeout values\n\ndescription: \"If still unacked after 1 minute\", type: 1\ndescription: \"If still unacked after 5 minutes\", type: 5\ndescription: \"If still unacked after 10 minutes\", type: 10\ndescription: \"If still unacked after 15 minutes\", type: 15\ndescription: \"If still unacked after 20 minutes\", type: 20\ndescription: \"If still unacked after 25 minutes\", type: 25\ndescription: \"If still unacked after 30 minutes\", type: 30\ndescription: \"If still unacked after 45 minutes\", type: 45",
@@ -313,11 +313,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "c57003bd2f08cf996b88f75432f72cf3",
+            "id": "9d3710849bc7dcdb0e2654c5c7c273b2",
             "name": "Get the user's paging policy",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies",
             "description": "Get all the paging policy steps for the user on the org associated with the API key\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -344,11 +344,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "117bb200dd81242fa19b5cf685a008eb",
+            "id": "c55d1d11199e3a6f70290e62081a78bb",
             "name": "Create a paging policy step",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies",
             "description": "Create a paging policy step\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -375,11 +375,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "29f3732c09b6fe4d7be217c389d14022",
+            "id": "25ad3d079077d09c51b3cd463381642f",
             "name": "Get a paging policy step",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}",
             "description": "Get a paging policy step\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -406,11 +406,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "88b935dca02cbf60f4ed4ad95ed00eaa",
+            "id": "59d271683b85777062706c3393dd8f7a",
             "name": "Update a paging policy step",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}",
             "description": "Update a paging policy step\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -437,11 +437,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "59f6d3bb8d6ade57f82075033296e9dc",
+            "id": "7e309edd68824ec87fcae0805569f40b",
             "name": "Create a rule for a paging policy step",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}",
             "description": "Create a rule for a paging policy step\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -468,11 +468,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "dfcafdfda9757799b52aea6ca7d862f6",
+            "id": "50d3b20e886e363cad0a915d92532554",
             "name": "Get a rule from a paging policy step",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}\/{rule}",
             "description": "Get a rule from a paging policy step\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -499,11 +499,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "8f546922748d593ba987fa59adbaf8b0",
+            "id": "b092eefef9dd22a098581cfa15194a06",
             "name": "Update a rule for a paging policy step",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}\/{rule}",
             "description": "Update a rule for a paging policy step\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -530,11 +530,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "b4e3d439014d883b453b7d25e169954a",
+            "id": "19c7ac76a25d66a7992fa974a99bda12",
             "name": "Delete a rule from a paging policy step",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/profile\/{username}\/policies\/{step}\/{rule}",
             "description": "Delete a rule from a paging policy step\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -561,11 +561,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "b939210a8cf15db41950dadafa9f7a75",
+            "id": "4894fb26ef72d539a139c6d01e99ea14",
             "name": "Get a list of all contact methods for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods",
             "description": "Get the contact methods for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -599,11 +599,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "bf83c31af535b6263ffd7add7cc35dfe",
+            "id": "f5740f846fcc7ddb8270ca540f5b22d1",
             "name": "Get a list of all contact devices for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/devices",
             "description": "Get the contact methods for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -637,11 +637,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "c6be8fc0b9730030a089a5bd07c99ef9",
+            "id": "e3abb2c2cc9b4f17c823d3c5ef915fc6",
             "name": "Get the indicated contact device for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/devices\/{contactId}",
             "description": "Get the indicated contact device for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -682,11 +682,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "da0d9a10a1be6036c4d123b3f3504705",
+            "id": "4bf1037a7e679158a203d631cd0b0190",
             "name": "Update a contact device for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/devices\/{contactId}",
             "description": "Update a contact device for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -727,11 +727,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "6e7e1091f5f750b4ef18375ef8697435",
+            "id": "0a978ca2635bd83779e446be79c8293a",
             "name": "Delete a contact device for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/devices\/{contactId}",
             "description": "Delete a contact device for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -772,11 +772,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "656eb8f69f5153b0bb56409504a94b17",
+            "id": "dd6781b3952a9ab11e1af115db566493",
             "name": "Get a list of all contact emails for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/emails",
             "description": "Get the contact emails for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -810,11 +810,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "1d2298eed7d06368f1f8a06fbb96ffa4",
+            "id": "827aac6a38d271de0d76ab748127f6bf",
             "name": "Create a contact emails for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/emails",
             "description": "Create a contact email for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -848,11 +848,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "6ac6fa51f4b7d088c4ac94acbfc26b6a",
+            "id": "a384811a870b3739f589d90a37ba3be1",
             "name": "Get the indicated contact email for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/emails\/{contactId}",
             "description": "Get the indicated contact email for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -893,11 +893,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "fc2529e7b62faccfcb6ae0cf622eebd1",
+            "id": "aa35c4080e5ee3f3aca8c3525cca9e08",
             "name": "Delete a contact email for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/emails\/{contactId}",
             "description": "Delete the indicated contact email for the user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -938,11 +938,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "8754ebed12a5516def76dca86e515f4e",
+            "id": "d4a4ae9751b7bad23652b03afbc3829a",
             "name": "Get a list of all contact phones for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/phones",
             "description": "Get the contact phones for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -976,11 +976,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "e5dcdbb03aac352a208b5b815d3f0b5c",
+            "id": "7411b43f428b43f85f8085729c86cd9a",
             "name": "Create a contact phones for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/phones",
             "description": "Create a contact phone for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1014,11 +1014,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "14ca818d88fb35a050c537cb06513d44",
+            "id": "271d6bfd7c3d83f13a047cd7be66babd",
             "name": "Get the indicated contact phone for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/phones\/{contactId}",
             "description": "Get the indicated contact phone for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1059,11 +1059,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "a7b1db9155bb161afecaf7b7510fd02c",
+            "id": "5c060d9585de8a77eafbf158d7bb89fd",
             "name": "Delete a contact phone for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/contact-methods\/phones\/{contactId}",
             "description": "Delete the indicated contact phone for the user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1104,11 +1104,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "09228ce04d0820634727b7015f0df6d6",
+            "id": "f3eae90dbf4c207fc37cbc894e8b0b2e",
             "name": "Get a list of paging policies for a user",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/policies",
             "description": "Get paging policies for a user\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1142,11 +1142,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "f584c35208b435cb4048e3d9b5390ffa",
+            "id": "1783deecd10fbaa489a53589d68f0fd8",
             "name": "Get a user's on-call schedule",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/user\/{user}\/oncall\/schedule",
             "description": "__NOTE: This call is deprecated. Please use `GET \/api-public\/v2\/user\/{user}\/oncall\/schedule`.__\n\nGet the on-call schedule for a user for all teams, including on-call overrides.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1180,11 +1180,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "40a08574f5aa5aa9dd491e22e31b92b2",
+            "id": "337537e943118802ffd579541c45b782",
             "name": "Get a user's on-call schedule",
             "url": "httpsapi.victorops.com\/\/api-public\/v2\/user\/{user}\/oncall\/schedule",
             "description": "Get the on-call schedule for a user for all teams the user is on, including on-call overrides.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1218,11 +1218,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "b08598bba5c463bf1be07c14699b7cf2",
+            "id": "9a035f3862a80f1c16da50b2c3bf2ed2",
             "name": "Get a team's on-call schedule",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/oncall\/schedule",
             "description": "__NOTE: This call is deprecated. Please use `GET \/api-public\/v2\/team\/{team}\/oncall\/schedule`.__\n\nGet the on-call schedule for a team, including on-call overrides.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1256,11 +1256,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "8d6c40c9f0f21b6dc6900801472b9eab",
+            "id": "5a95e3de8f2ce9469e951e1d496e8a6e",
             "name": "Get a team's on-call schedule",
             "url": "httpsapi.victorops.com\/\/api-public\/v2\/team\/{team}\/oncall\/schedule",
             "description": "Get the on-call schedule for a team, including on-call overrides.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1294,11 +1294,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "f8d1cd5fcdbd2b0a3fad52f6cd0a9826",
+            "id": "0247679edbb161782c7760337c4441a1",
             "name": "Get an organization's on-call users",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/oncall\/current",
             "description": "Get all on-call users\/teams for your organization.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1325,11 +1325,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "2c6b58caf8a83fbd9ac924bbf3aa83f1",
+            "id": "a1834dabac2ad32ef2d9a5e115828ea1",
             "name": "A list of shift changes for a team",
             "url": "httpsapi.victorops.com\/\/api-reporting\/v1\/team\/{team}\/oncall\/log",
             "description": "Returns a log of user shift changes for the specified team. This is historical\ndata, and may be up to 15 minutes behind real-time log data.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1384,11 +1384,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "18a9e36155dc63f04ff95cf2bfde01fd",
+            "id": "e5015db3d609bc9d5ac95e79f19b47b2",
             "name": "Create an on-call override (take on-call)",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/oncall\/user",
             "description": "__NOTE: This API call is deprecated. Please use `PATCH \/api-public\/v2\/policies\/{policy}\/oncall\/user`__\n\nReplaces a currently on-call user on the team with another.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1422,11 +1422,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "251c10745b488c238f3e1bf50ad076d1",
+            "id": "8da3a9d5604cf6b2380d3c07a4138887",
             "name": "Create an on-call override (take on-call)",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/policies\/{policy}\/oncall\/user",
             "description": "Replaces a currently on-call user in the escalation policy with another.  In many cases, the policy slug\nwill match the slug of the team that contains it.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1460,11 +1460,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "5f0a96565ae66aa7666a3cca3637e35b",
+            "id": "f47822664fa769dc571b0eed298e7778",
             "name": "Get current incident information",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents",
             "description": "Get a list of the currently open, acknowledged and recently resolved incidents.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1491,11 +1491,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "4acb70a5947257cf727726fbdd9166b2",
+            "id": "b9b05f2409a9cab967178cb229f5a935",
             "name": "Create a new incident",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents",
             "description": "Create a new incident.\n\nThis call replicates the function of our\n<a href=\"https:\/\/help.victorops.com\/knowledge-base\/manual-incident-creation\/\">manual incident creation process<\/a>.\nMonitoring tools and custom integrations\nshould be configured using our\n<a href=\"https:\/\/help.victorops.com\/knowledge-base\/victorops-restendpoint-integration\/\">REST Endpoint<\/a>.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1522,11 +1522,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "dd1dd3a2c71915ed4a304ec45f5a6799",
+            "id": "abfc2e6b7bd4ad8abf3b7eb133c9f3f3",
             "name": "Acknowledge an incident or list of incidents",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents\/ack",
             "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1553,11 +1553,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "3f9f7d4267c7bfc22ba903426282acd9",
+            "id": "20ba9c35e2896f1ddfa0dcb1cba38d0e",
             "name": "Reroute one or more incidents to one or more new routable destinations.",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents\/reroute",
             "description": "Reroute one or more incidents to one or more users and\/or escalation policies\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1584,11 +1584,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "bdf9c969607f6a3edcf23f921114fcb8",
+            "id": "cf8023d2a79086412cc19448fb9c8142",
             "name": "Resolve an incident or list of incidents",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents\/resolve",
             "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1615,11 +1615,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "2cf382f2d6d63fa0f561cf9f70f3a670",
+            "id": "0efee8c5f913487414834613258dd30a",
             "name": "Acknowledge all incidents for which a user was paged.",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents\/byUser\/ack",
             "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1646,11 +1646,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "00d6befa569c96009cb2322be1047d14",
+            "id": "5edf5b57bf9ccc149d6bf049e7482987",
             "name": "Resolve all incidents for which a user was paged.",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/incidents\/byUser\/resolve",
             "description": "The incident(s) must be currently open.  The user supplied must be a valid VictorOps user and a member of your organization.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1677,11 +1677,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "4cd5289e592610c18ed2ba6db26e8ffa",
+            "id": "a2d59a157d37a6a510346218f2d3a7b7",
             "name": "Retrieve alert details.",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/alerts\/{uuid}",
             "description": "Retrieve the details of an alert that was sent VictorOps by you.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1715,11 +1715,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "369f1fa1062e94447baa8f073bb33bb7",
+            "id": "78f6e9049b1e9ffb6c9d979296483bf9",
             "name": "List routing keys with associated teams",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/org\/routing-keys",
             "description": "Retrieves a list of routing keys and associated teams.\nThis API may be called a maximum of 60 times per minute.",
@@ -1746,11 +1746,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "b20aca949a42c321923fa598c1d08cc2",
+            "id": "48882daa2d4349b3d435ba67bbaeb063",
             "name": "List the scheduled overrides",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/overrides",
             "description": "List all the scheduled overrides on the organization\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1777,11 +1777,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "7540237a2c4dea6ba894e08126336187",
+            "id": "ad5f9dd57118e538682dcf70a2a28288",
             "name": "Creates a new scheduled override",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/overrides",
             "description": "Creates a new scheduled override. Start and end dates are in ISO8601 format. E.g. `2018-09-28'T'05:00:00Z`\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1808,11 +1808,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "63a0dff44c697d425062be6892db3ff8",
+            "id": "289d8c528fae5f89a22d242a3f24fba4",
             "name": "Get the specified scheduled override",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/overrides\/{publicId}",
             "description": "Get the specified scheduled override\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1846,11 +1846,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "461d70304ed2a6125889d3d037960254",
+            "id": "d09008b4ea355ffc767b63f67fb3d968",
             "name": "Deletes a scheduled override",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/overrides\/{publicId}",
             "description": "Deletes a scheduled override\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1884,11 +1884,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "ad4733f4122540465af3f8d9b519ee82",
+            "id": "96c297806182e4a9e57da0f97b3b10c0",
             "name": "Get the specified scheduled override",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/overrides\/{publicId}\/assignments",
             "description": "Get the specified scheduled override assignments\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1922,11 +1922,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "ee70cf736608ae7f4506b96de9ee2166",
+            "id": "b6683eac2ff609c6bb65b3b88089f25a",
             "name": "Get the specified scheduled override assignment",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/overrides\/{publicId}\/assignments\/{policySlug}",
             "description": "Get the specified scheduled override assignments\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -1967,11 +1967,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "a20c336782f0c426dfabba3e0df37a55",
+            "id": "09552397ad8d82c09679527b7415a4e6",
             "name": "Update the scheduled override assignment",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/overrides\/{publicId}\/assignments\/{policySlug}",
             "description": "Update the scheduled override assignment\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2012,11 +2012,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "d7f9fb4b5ecf0f068a3e4184f120c787",
+            "id": "5b49572aef6ee128e67c71429c3bc788",
             "name": "Delete the scheduled override assignment",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/overrides\/{publicId}\/assignments\/{policySlug}",
             "description": "Delete the scheduled override assignment\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2057,11 +2057,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "2ceab033d69445bc8cf249ebea3fdd8e",
+            "id": "84b579f5b1c67193ad01bb4d60b8bbf5",
             "name": "Get escalation policy info",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/policies",
             "description": "Retrieves a list of escalation policy information.\nThis API may be called a maximum of once a minute.",
@@ -2088,11 +2088,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "b8f0d564ffbdd2f9069df31937ab7902",
+            "id": "641d53d49ba6c7db48ccf26327583950",
             "name": "Get\/search incident history",
             "url": "httpsapi.victorops.com\/\/api-reporting\/v1\/incidents",
             "description": "\n__NOTE: This call is deprecated. Please use `GET \/api-reporting\/v2\/incidents`.__\n\nRetrieve incident history for your company, searching over date ranges and with filtering options.  This is historical\ndata, and may be up to 15 minutes behind real-time incident data.  By default, only resolved incidents will be returned.\n\nThis API may be called a maximum of once a minute.\n\nIncident requests are paginated with a offset and limit query string parameters.\n  The query for incidents is run and offset",
@@ -2168,11 +2168,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "8686e284157ed9b4ba48e7a43abd3f08",
+            "id": "c5604cede224c312c6a3a707dcf3a972",
             "name": "Get\/search incident history",
             "url": "httpsapi.victorops.com\/\/api-reporting\/v2\/incidents",
             "description": "Retrieve incident history for your company, searching over date ranges and with filtering options.\n\nThis API may be called a maximum of once a minute.\n\nIncident requests are paginated with a offset and limit query string parameters.\n  The query for incidents is run and offset records are skipped, after which limit records will be returned.\n\nThe default offset is 0 and the default limit is 20. The maximum value allowed for limit is 100.\n\nUnless specified otherwise with the parameter currentPhase,",
@@ -2255,11 +2255,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "56b5c442bed22ef0dcfd363b16b2c8ba",
+            "id": "e6f6bed425eee1b55b731c81322abd19",
             "name": "Add a team",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team",
             "description": "Add a team to your organization.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2286,11 +2286,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "b895ca1cd797cabf184c939ade1bc2dc",
+            "id": "70d54526dab467c96a7e3d1a7a74a8e8",
             "name": "List teams",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team",
             "description": "Get a list of teams for your organization.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2317,11 +2317,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "dadcda28fc80a0cd6628689104fd9267",
+            "id": "eb791a0de9e182053c502949f9422ff1",
             "name": "Retrieve information for a team",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}",
             "description": "Get the information for the specified team.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2355,11 +2355,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "64d79b4c52cd954b813f5bde7960966c",
+            "id": "87dbe2fc6a52f5cdbb6f13cf28a7ae63",
             "name": "Update a team",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}",
             "description": "Update the designated team\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2393,11 +2393,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "6368e3214a38470376a85175f31d98a4",
+            "id": "39b900f7bcdeebcf08166bcfb9065b77",
             "name": "Remove a team",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}",
             "description": "Remove a team from your organization.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2431,11 +2431,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "468560c89619916c4eaa552688c84d10",
+            "id": "46f38f17892307e11644da22d1c9b20b",
             "name": "Retrieve a list of escalation policies for a team",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/policies",
             "description": "Get the escalation policies for the specified team.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2469,11 +2469,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "b63bb658aa08336481a5a4da0198b129",
+            "id": "a09976fbca43fcc9b1e1d52dc3338018",
             "name": "Retrieve a list of team admins for a team",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/admins",
             "description": "Get the team admins for the specified team.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2507,11 +2507,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "c0bac195dce80a1cece45db1fd3d5181",
+            "id": "0ffe020dd57900b80e46413ef617dd61",
             "name": "Retrieve a list of members for a team",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/members",
             "description": "Get the members for the specified team.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2545,11 +2545,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "9e245658b15b8d204f07061cfd3d404d",
+            "id": "75f7aa9c12128da9cf84dc81fe4337f6",
             "name": "Add a team member",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/members",
             "description": "Add a team member to your team.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2583,11 +2583,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "06d1ddc8977111ff1b3b43171e30d73a",
+            "id": "b136bbf3901bcb0168dd6442cd37fde9",
             "name": "Remove a team member",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/team\/{team}\/members\/{user}",
             "description": "Remove a team from your organization.\n\nThis API may be called a maximum of 60 times per minute.\n",
@@ -2628,11 +2628,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "2df59e93ac8211a9780143aede275794",
+            "id": "c9bd2feeab8dc7205bb0e4291516cf17",
             "name": "Get an organization's current maintenance mode state",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/maintenancemode",
             "description": "",
@@ -2659,11 +2659,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "275e5af43b467b62ef250bb0a3b67640",
+            "id": "505453988daec8dacb2e3b8913bb5e5f",
             "name": "Start maintenance mode for routing keys",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/maintenancemode\/start",
             "description": "",
@@ -2690,11 +2690,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         },
         {
-            "id": "ee3cdf08a306051abcec7b6e6b2dfa03",
+            "id": "8ce97c79bcc083ea09bc9768b0cf128f",
             "name": "End maintenance mode for routing keys",
             "url": "httpsapi.victorops.com\/\/api-public\/v1\/maintenancemode\/{maintenancemodeid}\/end",
             "description": "",
@@ -2721,7 +2721,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eef4a95ff8429dbab00446705980336c",
+            "collectionId": "1e9803915a4431889829386c95e50adf",
             "rawModeData": ""
         }
     ]
