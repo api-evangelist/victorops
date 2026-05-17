@@ -67,7 +67,7 @@ common:
     url: https://help.victorops.com/knowledge-base/api/
   - type: Pricing
     url: https://www.splunk.com/en_us/products/on-call.html
-  - type: Sign Up
+  - type: SignUp
     url: https://portal.victorops.com/membership/#/
   - type: Login
     url: https://portal.victorops.com/auth/#/login
