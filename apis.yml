@@ -59,6 +59,10 @@ apis:
       - Alerting
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/victorops
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/victorops-inc-
   - type: Website
     url: https://www.splunk.com/en_us/products/on-call.html
   - type: Documentation
