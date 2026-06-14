@@ -1,0 +1,657 @@
+"""
+VictorOps (Splunk On-Call) Conceptual GraphQL Schema
+Source: https://help.victorops.com/knowledge-base/api/
+This schema models the VictorOps REST API as a GraphQL type system.
+Authentication via X-VO-Api-Id and X-VO-Api-Key headers.
+"""
+
+# ─── Enums ────────────────────────────────────────────────────────────────────
+
+"""Lifecycle state of a VictorOps incident."""
+enum IncidentState {
+  TRIGGERED
+  ACKNOWLEDGED
+  RESOLVED
+}
+
+"""Classification of a contact method for a user."""
+enum ContactType {
+  EMAIL
+  PHONE
+  PUSH
+}
+
+"""Severity level for an alert payload."""
+enum AlertSeverity {
+  CRITICAL
+  WARNING
+  INFO
+  UNKNOWN
+}
+
+"""Type of rotation cadence."""
+enum RotationCadence {
+  DAILY
+  WEEKLY
+  CUSTOM
+}
+
+"""Role of a member within a team."""
+enum TeamRole {
+  ADMIN
+  MEMBER
+}
+
+# ─── Scalars ──────────────────────────────────────────────────────────────────
+
+"""ISO 8601 date-time string."""
+scalar DateTime
+
+"""Arbitrary JSON object, used for raw alert payloads."""
+scalar JSON
+
+# ─── Incident Types ───────────────────────────────────────────────────────────
+
+"""A VictorOps incident record."""
+type Incident {
+  incidentNumber: String!
+  entityId: String
+  entityType: String
+  entityDisplayName: String
+  state: IncidentState!
+  currentPhase: String
+  startTime: DateTime
+  lastAlertTime: DateTime
+  entityState: String
+  service: String
+  host: String
+  pagedTeams: [String]
+  pagedUsers: [String]
+  pagedPolicies: [String]
+  transitions: [IncidentTransition]
+  details: IncidentDetails
+  meta: IncidentMeta
+}
+
+"""Extended details for an incident, including full timeline."""
+type IncidentDetails {
+  incidentNumber: String!
+  entityId: String
+  entityType: String
+  entityDisplayName: String
+  monitoringTool: String
+  monitoringToolUrl: String
+  service: String
+  host: String
+  alertCount: Int
+  timeline: IncidentTimeline
+  alerts: [Alert]
+}
+
+"""A transition (state change) recorded on an incident."""
+type IncidentTransition {
+  name: IncidentState
+  at: DateTime
+  by: String
+  message: String
+  manually: Boolean
+  alertId: String
+}
+
+"""Ordered collection of timeline events for an incident."""
+type IncidentTimeline {
+  incidentNumber: String!
+  entries: [IncidentTimelineEntry]
+}
+
+"""A single event entry in the incident timeline."""
+type IncidentTimelineEntry {
+  timestamp: DateTime
+  type: String
+  actor: String
+  message: String
+  raw: JSON
+}
+
+"""Operational metadata for an incident such as MTTA and MTTR."""
+type IncidentMeta {
+  incidentNumber: String!
+  mtta: Int
+  mttr: Int
+  totalAlerts: Int
+  uniqueUsers: Int
+  service: String
+  host: String
+}
+
+# ─── Alert Types ──────────────────────────────────────────────────────────────
+
+"""A processed alert stored within a VictorOps incident."""
+type Alert {
+  uuid: String!
+  incidentNumber: String
+  entityId: AlertEntityId
+  entityType: AlertEntityType
+  entityDisplayName: AlertEntityDisplayName
+  stateMessage: AlertStateMessage
+  stateStartTime: DateTime
+  monitoringTool: String
+  monitoringToolUrl: String
+  severity: AlertSeverity
+  routingKey: String
+  raw: JSON
+}
+
+"""Entity identifier string carried in an alert."""
+type AlertEntityId {
+  value: String!
+}
+
+"""Entity type classification label carried in an alert."""
+type AlertEntityType {
+  value: String!
+}
+
+"""Human-readable display name for the alerting entity."""
+type AlertEntityDisplayName {
+  value: String!
+}
+
+"""The state message string embedded in an alert payload."""
+type AlertStateMessage {
+  value: String!
+}
+
+"""The JSON payload body sent to the VictorOps REST ingest endpoint."""
+type AlertPayload {
+  messageType: String!
+  entityId: String!
+  entityDisplayName: String
+  stateMessage: String
+  monitoringTool: String
+  hostName: String
+  service: String
+  severity: AlertSeverity
+  routingKey: String
+  raw: JSON
+}
+
+"""An acknowledgement action applied to an alert."""
+type AlertAck {
+  alertId: String!
+  acknowledgedBy: String
+  acknowledgedAt: DateTime
+}
+
+"""A resolution action applied to an alert."""
+type AlertResolve {
+  alertId: String!
+  resolvedBy: String
+  resolvedAt: DateTime
+}
+
+# ─── Escalation Policy Types ──────────────────────────────────────────────────
+
+"""A named escalation policy containing ordered steps."""
+type EscalationPolicy {
+  policy: String!
+  teamSlug: String
+  steps: [EscalationStep]
+  ignoreCustomPagingPolicies: Boolean
+}
+
+"""A single step in an escalation policy."""
+type EscalationStep {
+  timeout: EscalationTimeout
+  entries: [EscalationStepEntry]
+}
+
+"""A target entry within an escalation step (user, rotation, or policy)."""
+type EscalationStepEntry {
+  stepType: String
+  username: String
+  rotationName: String
+  policyName: String
+  executionType: String
+}
+
+"""Wait duration before advancing to the next escalation step."""
+type EscalationTimeout {
+  minutes: Int!
+}
+
+"""A rotation referenced as a target within an escalation step."""
+type EscalationRotation {
+  name: String!
+  teamSlug: String
+  rotationType: RotationCadence
+}
+
+# ─── On-Call Schedule Types ───────────────────────────────────────────────────
+
+"""Current on-call state for a given team or escalation policy."""
+type OnCall {
+  teamSlug: String
+  oncallNow: [OnCallNowEntry]
+  oncallSchedule: OnCallSchedule
+}
+
+"""A single on-call responder entry for right now."""
+type OnCallNowEntry {
+  onCall: String
+  username: String
+  usersInSchedule: [String]
+}
+
+"""The computed future on-call schedule for a team."""
+type OnCallSchedule {
+  teamSlug: String
+  schedule: [ScheduleEntry]
+  overrideOnCallNow: [String]
+}
+
+"""A single shift entry in a computed on-call schedule."""
+type ScheduleEntry {
+  onCallUser: String
+  rollSlug: String
+  shiftName: String
+  shiftRoll: String
+  rolls: [ShiftRoll]
+}
+
+"""A specific roll within an on-call shift."""
+type ShiftRoll {
+  start: DateTime
+  end: DateTime
+  onCallUser: String
+}
+
+"""On-call configuration and schedule scoped to a team."""
+type OnCallTeam {
+  teamSlug: String!
+  teamName: String
+  oncallSchedule: OnCallSchedule
+  rotations: [Rotation]
+}
+
+"""A repeating on-call rotation definition."""
+type Rotation {
+  name: String!
+  teamSlug: String
+  cadence: RotationCadence
+  shiftStart: String
+  timezone: TimeZone
+  groups: [RotationGroup]
+}
+
+"""A named group of users within a rotation."""
+type RotationGroup {
+  name: String!
+  members: [String]
+  order: Int
+}
+
+"""A time-bounded override replacing the normal on-call rotation."""
+type ScheduledOverride {
+  origOnCallUser: String
+  overrideOnCallUser: String!
+  start: DateTime!
+  end: DateTime!
+  teamSlug: String
+  publicId: String
+}
+
+# ─── Team Types ───────────────────────────────────────────────────────────────
+
+"""A named operational team in VictorOps."""
+type Team {
+  slug: String!
+  name: String!
+  memberCount: Int
+  version: Int
+  isDefaultTeam: Boolean
+  members: [TeamMembership]
+  policies: [EscalationPolicy]
+}
+
+"""Join record linking a user to a team with a role."""
+type TeamMembership {
+  username: String!
+  firstName: String
+  lastName: String
+  role: TeamRole
+  version: Int
+}
+
+# ─── User Types ───────────────────────────────────────────────────────────────
+
+"""A VictorOps user account."""
+type User {
+  username: String!
+  firstName: String
+  lastName: String
+  email: String
+  createdAt: DateTime
+  passwordLastUpdated: DateTime
+  verified: Boolean
+  details: UserDetails
+}
+
+"""Extended user profile including contact methods and notification policy."""
+type UserDetails {
+  username: String!
+  firstName: String
+  lastName: String
+  displayName: String
+  email: String
+  createdAt: DateTime
+  verified: Boolean
+  contactMethods: [UserContactMethod]
+  notificationPolicy: NotificationPolicy
+}
+
+"""A single contact channel registered for a user."""
+type UserContactMethod {
+  label: String
+  type: ContactType!
+  value: String!
+  rank: Int
+  extId: String
+}
+
+"""A phone number registered for SMS or voice notification."""
+type PhoneNumber {
+  label: String
+  phone: String!
+  rank: Int
+  extId: String
+}
+
+"""An email address registered for notification delivery."""
+type EmailAddress {
+  label: String
+  email: String!
+  rank: Int
+  extId: String
+}
+
+"""A registered mobile push device for notification delivery."""
+type PushDevice {
+  label: String
+  deviceType: String
+  platform: String
+  rank: Int
+  extId: String
+}
+
+# ─── Notification Types ───────────────────────────────────────────────────────
+
+"""A single notification delivery record."""
+type Notification {
+  id: String!
+  username: String
+  incidentNumber: String
+  deliveredAt: DateTime
+  contactType: ContactType
+  destination: String
+  successful: Boolean
+}
+
+"""Ordered set of notification steps used to contact a user."""
+type NotificationPolicy {
+  username: String!
+  steps: [NotificationStep]
+}
+
+"""A single step in a user notification policy."""
+type NotificationStep {
+  delayMinutes: Int
+  contactType: ContactType
+  contactValue: String
+}
+
+# ─── Schedule and Time Types ──────────────────────────────────────────────────
+
+"""A generic schedule definition used by rotations and overrides."""
+type Schedule {
+  name: String!
+  slug: String
+  timezone: TimeZone
+  teamSlug: String
+  description: String
+}
+
+"""A time zone string associated with a schedule or user."""
+type TimeZone {
+  name: String!
+  offset: String
+}
+
+"""A bounded time interval with start and end timestamps."""
+type TimeRange {
+  start: DateTime!
+  end: DateTime!
+}
+
+# ─── Routing Types ────────────────────────────────────────────────────────────
+
+"""The routing configuration for a VictorOps organization."""
+type Routing {
+  defaultPolicy: String
+  routingKeys: [RoutingKey]
+}
+
+"""A named routing key that maps alert sources to escalation policies."""
+type RoutingKey {
+  routingKey: String!
+  targets: [RoutingTarget]
+  isDefault: Boolean
+}
+
+"""A target policy or team referenced by a routing key."""
+type RoutingTarget {
+  policySlug: String
+  policyName: String
+}
+
+"""The identifier for a routing rule entry."""
+type RoutingRuleId {
+  value: String!
+}
+
+# ─── Reporting and Metrics Types ──────────────────────────────────────────────
+
+"""Envelope for a report request or result from the VictorOps API."""
+type Report {
+  id: String
+  type: String
+  start: DateTime
+  end: DateTime
+  teamSlug: String
+  data: JSON
+}
+
+"""Aggregated incident statistics for a given time period."""
+type IncidentReport {
+  teamSlug: String
+  start: DateTime
+  end: DateTime
+  totalIncidents: Int
+  averageMtta: Float
+  averageMttr: Float
+  incidentsByDay: [DailyIncidentCount]
+}
+
+"""Incident count for a single day in an incident report."""
+type DailyIncidentCount {
+  date: String
+  count: Int
+}
+
+"""A single measured metric data point from alert activity."""
+type AlertMetric {
+  timestamp: DateTime
+  metricName: String
+  value: Float
+  unit: String
+  teamSlug: String
+}
+
+"""Summary of escalation policy coverage and potential gaps."""
+type PoliciesSummary {
+  teamSlug: String
+  totalPolicies: Int
+  policiesWithRotations: Int
+  policiesWithoutMembers: Int
+  policies: [EscalationPolicy]
+}
+
+# ─── Webhook and Integration Types ────────────────────────────────────────────
+
+"""A webhook payload dispatched to an outbound endpoint."""
+type WebhookEvent {
+  eventType: String!
+  incidentNumber: String
+  entityId: String
+  currentState: IncidentState
+  previousState: IncidentState
+  entityDisplayName: String
+  monitoringTool: String
+  teamSlug: String
+  timestamp: DateTime
+  payload: JSON
+}
+
+"""An API credential record used for authentication."""
+type APIKey {
+  apiId: String!
+  description: String
+  createdAt: DateTime
+  createdBy: String
+  active: Boolean
+}
+
+"""An access token object for API authentication."""
+type Token {
+  tokenValue: String!
+  tokenType: String
+  expiresAt: DateTime
+  issuedAt: DateTime
+  scopes: [String]
+}
+
+# ─── Root Query ───────────────────────────────────────────────────────────────
+
+type Query {
+  """Retrieve a single incident by number."""
+  incident(incidentNumber: String!): Incident
+
+  """List all active or recent incidents."""
+  incidents(state: IncidentState, teamSlug: String): [Incident]
+
+  """Retrieve full details for an incident."""
+  incidentDetails(incidentNumber: String!): IncidentDetails
+
+  """Retrieve incident timeline events."""
+  incidentTimeline(incidentNumber: String!): IncidentTimeline
+
+  """Get the current on-call responder for a team."""
+  onCall(teamSlug: String!): OnCall
+
+  """Get the on-call schedule for a team."""
+  onCallSchedule(teamSlug: String!, daysForward: Int): OnCallSchedule
+
+  """List all scheduled overrides for a team."""
+  scheduledOverrides(teamSlug: String!): [ScheduledOverride]
+
+  """Retrieve a team by its slug."""
+  team(teamSlug: String!): Team
+
+  """List all teams in the organization."""
+  teams: [Team]
+
+  """Retrieve a user by username."""
+  user(username: String!): User
+
+  """List all users in the organization."""
+  users: [User]
+
+  """Retrieve user details including contact methods."""
+  userDetails(username: String!): UserDetails
+
+  """Retrieve an escalation policy by name and team."""
+  escalationPolicy(teamSlug: String!, policyName: String!): EscalationPolicy
+
+  """List escalation policies for a team."""
+  escalationPolicies(teamSlug: String!): [EscalationPolicy]
+
+  """Get the organization routing configuration."""
+  routing: Routing
+
+  """List all routing keys."""
+  routingKeys: [RoutingKey]
+
+  """Get an incident report for a team and time range."""
+  incidentReport(teamSlug: String!, start: DateTime!, end: DateTime!): IncidentReport
+
+  """Get alert metrics for a team and time range."""
+  alertMetrics(teamSlug: String!, start: DateTime!, end: DateTime!): [AlertMetric]
+
+  """Get a summary of escalation policy coverage."""
+  policiesSummary(teamSlug: String!): PoliciesSummary
+
+  """List API keys for the organization."""
+  apiKeys: [APIKey]
+}
+
+# ─── Root Mutation ────────────────────────────────────────────────────────────
+
+type Mutation {
+  """Acknowledge an active incident."""
+  acknowledgeIncident(incidentNumber: String!, username: String!, message: String): Incident
+
+  """Resolve an active incident."""
+  resolveIncident(incidentNumber: String!, username: String!, message: String): Incident
+
+  """Create a new team."""
+  createTeam(name: String!, description: String): Team
+
+  """Delete a team by slug."""
+  deleteTeam(teamSlug: String!): Boolean
+
+  """Add a member to a team."""
+  addTeamMember(teamSlug: String!, username: String!): TeamMembership
+
+  """Remove a member from a team."""
+  removeTeamMember(teamSlug: String!, username: String!): Boolean
+
+  """Create a new user."""
+  createUser(username: String!, firstName: String!, lastName: String!, email: String!): User
+
+  """Delete a user."""
+  deleteUser(username: String!): Boolean
+
+  """Add a contact method to a user."""
+  addContactMethod(username: String!, type: ContactType!, value: String!, label: String): UserContactMethod
+
+  """Delete a contact method from a user."""
+  deleteContactMethod(username: String!, extId: String!): Boolean
+
+  """Create a scheduled override for on-call."""
+  createScheduledOverride(teamSlug: String!, origOnCallUser: String!, overrideOnCallUser: String!, start: DateTime!, end: DateTime!): ScheduledOverride
+
+  """Delete a scheduled override."""
+  deleteScheduledOverride(teamSlug: String!, publicId: String!): Boolean
+
+  """Create or update an escalation policy."""
+  upsertEscalationPolicy(teamSlug: String!, policyName: String!, steps: JSON!): EscalationPolicy
+
+  """Delete an escalation policy."""
+  deleteEscalationPolicy(teamSlug: String!, policyName: String!): Boolean
+
+  """Create a routing key."""
+  createRoutingKey(routingKey: String!, targets: [String!]!): RoutingKey
+
+  """Delete a routing key."""
+  deleteRoutingKey(routingKey: String!): Boolean
+}
