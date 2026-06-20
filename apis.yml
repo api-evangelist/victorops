@@ -9,7 +9,7 @@ description: Splunk On-Call, formerly known as VictorOps, is an incident managem
   escalation policies, incidents, and integrations using API ID and API Key authentication
   headers.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Incident Management
 - On-Call
