@@ -55,6 +55,12 @@ apis:
   - Webhooks
   - Alerting
 common:
+- type: TrustCenter
+  url: security/victorops-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/victorops-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/victorops-domain-security.yml
 - type: GitHubOrganization
   url: https://github.com/victorops
 - type: LinkedIn
