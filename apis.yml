@@ -61,6 +61,10 @@ apis:
   baseURL: https://alert.victorops.com/integrations/generic/20131114/alert
   tags:
   - Incident Creation
+  - Webhook
+  - Alerting
+  tags_raw:
+  - Incident Creation
   - Webhooks
   - Alerting
 common:
