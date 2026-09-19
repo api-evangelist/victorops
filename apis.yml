@@ -55,6 +55,13 @@ apis:
   - On-Call
   - Alerting
   - Escalation
+  - Schedule
+  - Incidents
+  tags_raw:
+  - Incident Management
+  - On-Call
+  - Alerting
+  - Escalation
   - Schedules
   - Incidents
   properties:
