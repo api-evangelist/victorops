@@ -1,0 +1,38 @@
+# Front Door AI Index — victorops — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: victorops
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.splunk.com
+  final_host: www.splunk.com
+  ownership: shared
+  owner: splunk
+  shares_host_with:
+  - signalfx
+  - splunk
+  - splunk-observability
+  - splunk-soar
+  inherited_from: null
+  verdict: scored
+  score: null
+  host_score: 65
+  density: null
+  words: 1723
+  tiers:
+    agentic: 18
+    core: 47
+    model: 0
+  ambiguous: 22
+  top_terms:
+    AI: 43
+    agent: 16
+    agentic: 10
+    AI agent: 6
+    automation: 3
+    intelligence: 3
+    LLMs: 2
+    artificial intelligence: 2
+    MCP: 1
+    autonomous agent: 1
