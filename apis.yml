@@ -69,8 +69,6 @@ apis:
     url: https://help.victorops.com/knowledge-base/api/
   - type: REST Endpoint Integration
     url: https://help.victorops.com/knowledge-base/rest-endpoint-integration-guide/
-  - url: graphql/victorops-graphql.md
-    type: GraphQL
 - aid: victorops:rest-endpoint
   name: Splunk On-Call REST Endpoint
   description: Inbound REST endpoint for creating incidents from any monitoring system via HTTPS POST with a JSON
